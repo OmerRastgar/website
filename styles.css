@@ -1,0 +1,216 @@
+/* Root Variables */
+:root {
+    --primary-color: #082c3c;
+    --light-color: #e0dcdc;
+    --deep-black: #080404;
+}
+
+/* Base Styles */
+body {
+    background-color: var(--light-color);
+}
+
+/* Navigation Styles */
+.navbar {
+    background-color: var(--primary-color) !important;
+}
+
+.dropdown-menu {
+    background-color: var(--primary-color);
+    border: none;
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+}
+
+.dropdown:not(:hover) .dropdown-menu {
+    transition-delay: 0.5s;
+}
+
+.dropdown-item {
+    color: var(--light-color);
+}
+
+.dropdown-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(var(--primary-color), var(--primary-color)), url('/api/placeholder/1200/400');
+    background-size: cover;
+    background-position: center;
+    color: var(--light-color);
+    padding: 8rem 0 4rem;
+}
+
+/* Card Styles */
+.service-card,
+.compliance-card,
+.feature-card,
+.team-card,
+.process-card {
+    transition: transform 0.3s;
+    height: 100%;
+}
+
+.service-card:hover,
+.compliance-card:hover,
+.feature-card:hover,
+.process-card:hover {
+    transform: translateY(-5px);
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Icon Styles */
+.icon-circle,
+.benefit-icon,
+.feature-icon {
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+}
+
+.icon-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.benefit-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.feature-icon {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 0.75rem;
+    color: var(--light-color);
+    font-size: 1.5rem;
+}
+
+/* Compliance Specific */
+.fa-credit-card,
+.fa-hospital-user,
+.fa-shield-alt {
+    color: var(--primary-color);
+}
+
+.framework-badge {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    display: inline-block;
+    margin: 0.25rem;
+}
+
+.checklist-item {
+    padding: 1rem;
+    border-left: 3px solid var(--primary-color);
+    margin-bottom: 1rem;
+    background-color: white;
+}
+
+/* Timeline Styles */
+.timeline {
+    position: relative;
+    padding: 2rem 0;
+}
+.timeline2 {
+    position: relative;
+    padding-left: 3rem;
+}
+.timeline2::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background-color: var(--primary-color);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+
+
+
+
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background-color: var(--primary-color);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+/* Stats Section */
+.stats-card {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+/* Mission Section */
+.mission-section {
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* CTA Styles */
+.cta-button {
+    background-color: var(--light-color);
+    color: var(--primary-color);
+    transition: transform 0.3s;
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+}
+
+.cta-section {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 31px;
+    }
+}
