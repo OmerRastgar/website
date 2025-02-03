@@ -37,11 +37,11 @@ bootstrapScript.async = true;
 // Append the script to the document's head or body
 document.head.appendChild(bootstrapScript);
 
-document.getElementById('Form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    alert('Thank you for your request! ');
-    this.reset();
-});
+// document.getElementById('Form').addEventListener('submit', function(e) {
+//     e.preventDefault();
+//     alert('Thank you for your request! ');
+//     this.reset();
+// });
 
 // Smooth scroll
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
