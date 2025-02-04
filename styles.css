@@ -218,3 +218,6 @@ section.bg-white {
     width: 100%;
    
 }
+
+/* Hide dropdown menu in mobile view by default */
+/* Optionally, keep the following to ensure no space is reserved for hidden dropdown in mobile mode */
