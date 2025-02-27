@@ -1,7 +1,7 @@
 const canvas = document.getElementById("hexCanvas");
 const ctx = canvas.getContext("2d");
 canvas.width = window.innerWidth;
-canvas.height = window.innerHeight * 0.55; // Limit canvas height to top 30% of the page
+canvas.height = window.innerHeight * 0.4; // Limit canvas height to top 30% of the page
 
 let hexagons = [];
 const maxHexagons = Math.floor(canvas.width * canvas.height / 50000);
