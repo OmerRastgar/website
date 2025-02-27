@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberGaar - Dark Theme</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-4" href="#">CyberGaar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="main-container">
+        <h1>Welcome to CyberGaar</h1>
+        <p>Secure your digital assets with our expert cybersecurity audits.</p>
+    </div>
+    
+    <canvas id="hexCanvas"></canvas>
+    
+    <script>
+        const canvas = document.getElementById("hexCanvas");
+        const ctx = canvas.getContext("2d");
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        let hexagons = [];
+        
+        function createHexagon(x, y, size) {
+            return { x, y, size, speedX: (Math.random() - 0.5) * 2, speedY: (Math.random() - 0.5) * 2 };
+        }
+        
+        function drawHexagon(hex) {
+            ctx.strokeStyle = "rgba(200, 200, 200, 0.6)";
+            ctx.lineWidth = 2;
+            ctx.beginPath();
+            for (let i = 0; i < 6; i++) {
+                let angle = Math.PI / 3 * i;
+                let x = hex.x + hex.size * Math.cos(angle);
+                let y = hex.y + hex.size * Math.sin(angle);
+                ctx.lineTo(x, y);
+            }
+            ctx.closePath();
+            ctx.stroke();
+        }
+        
+        function animateHexagons() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            hexagons.forEach(hex => {
+                hex.x += hex.speedX;
+                hex.y += hex.speedY;
+                drawHexagon(hex);
+            });
+        }
+        
+        function init() {
+            for (let i = 0; i < 50; i++) {
+                hexagons.push(createHexagon(Math.random() * canvas.width, Math.random() * canvas.height, 30));
+            }
+            setInterval(animateHexagons, 33);
+        }
+        
+        init();
+    </script>
+</body>
+</html>
