@@ -60,7 +60,7 @@ body {
     transform: translateY(-2px);
 }
 .dropdown-menu {
-    background-color: #222;
+    background-color: #05202c;
     border: none;
     display: hidden;
     opacity: 0;
@@ -274,4 +274,138 @@ canvas {
     display: inline-block;
     font-family: monospace;
     transition: all 0.5s ease-in-out;
+}
+
+.client-section {
+    padding: 5rem 0;
+    background-color: var(--light-color);
+}
+
+.client-carousel {
+    padding: 2rem 0;
+}
+
+.client-item {
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 20px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+    transition: transform 0.3s;
+}
+
+.client-item:hover {
+    transform: translateY(-5px);
+}
+
+.client-item img {
+    max-height: 80px;
+    max-width: 100%;
+    filter: grayscale(100%);
+    transition: filter 0.3s;
+}
+
+.client-item:hover img {
+    filter: grayscale(0%);
+}
+
+/* Testimonial Styles */
+.testimonial-section {
+    background-color: var(--light-color);
+    padding: 5rem 0;
+}
+
+.testimonial-card {
+    background-color: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    margin: 10px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.testimonial-card::before {
+    content: '\201C';
+    font-family: Georgia, serif;
+    font-size: 5rem;
+    position: absolute;
+    top: -20px;
+    left: 10px;
+    color: var(--primary-color);
+    opacity: 0.1;
+}
+
+.testimonial-content {
+    flex-grow: 1;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+    line-height: 1.7;
+}
+
+.client-info {
+    display: flex;
+    align-items: center;
+}
+
+.client-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 15px;
+    background-color: #f0f0f0;
+}
+
+.client-details h5 {
+    margin-bottom: 0;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.client-details p {
+    margin-bottom: 0;
+    color: #777;
+}
+
+.stars {
+    color: gold;
+    margin-bottom: 10px;
+}
+
+/* Control Buttons */
+.carousel-control {
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 18px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    transition: all 0.3s;
+    z-index: 10;
+}
+
+.carousel-control:hover {
+    background-color: #0a3e56;
+}
+
+.carousel-control.prev {
+    left: -20px;
+}
+
+.carousel-control.next {
+    right: -20px;
 }
