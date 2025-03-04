@@ -379,6 +379,9 @@ canvas {
     margin-bottom: 10px;
 }
 
+
+
+
 /* Control Buttons */
 .carousel-control {
     width: 40px;
@@ -408,4 +411,76 @@ canvas {
 
 .carousel-control.next {
     right: -20px;
+}
+
+.client-carousel-container {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+.client-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.client-item img {
+    max-width: 150px;  /* Adjust as needed */
+    max-height: 80px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    padding: 10px;
+    transition: 0.3s ease-in-out;
+}
+
+.carousel-control:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .client-item img {
+        max-width: 120px;
+        max-height: 60px;
+    }
+
+    .carousel-control {
+        font-size: 20px;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .client-item img {
+        max-width: 100px;
+        max-height: 50px;
+    }
+
+    .carousel-control {
+        font-size: 18px;
+        padding: 6px;
+    }
 }
