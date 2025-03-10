@@ -5,9 +5,33 @@
     --deep-black: #080404;
 }
 
+@font-face {
+    font-family: 'Aeonik';
+    src: url('Aeonik/Aeonik-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Aeonik';
+    src: url('Aeonik/Aeonik-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Aeonik';
+    src: url('Aeonik/Aeonik-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+/* Apply it to the whole website */
+
 /* Base Styles */
 body {
     background-color: var(--light-color);
+    font-family: 'Aeonik', sans-serif;
 }
 
 /* Navigation Styles */
@@ -416,6 +440,7 @@ canvas {
 .client-carousel-container {
     position: relative;
     max-width: 100%;
+    min-height: 15vh;
     overflow: hidden;
     padding: 20px 0;
 }
