@@ -61,7 +61,24 @@ body {
     margin: 0 5px;
     transition: all 0.3s;
 }
-
+.logo-img {
+    max-height: 7vh;  /* 20% of viewport height */
+    width: auto;
+}
+  
+  /* Adjust logo size for tablets */
+@media (max-width: 991px) {
+    .logo-img {
+      max-height: 7vh;  /* Instead of 120px */
+    }
+}
+  
+  /* Further reduce logo size for mobile phones */
+@media (max-width: 576px) {
+    .logo-img {
+      max-height: 7vh;  /* Instead of 80px */
+    }
+}
 .navbar-nav .nav-link:hover {
     color: rgba(255,255,255,0.8);
 }
